@@ -1,6 +1,6 @@
 apiVersion: v2
 name: chart-sergio
-description: A Helm chart for Kubernetes
+description: Teste de chart para o curso da Jack
 
 # A chart can be either an 'application' or a 'library' chart.
 #
