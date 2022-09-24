@@ -25,21 +25,21 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  runAsUser: 1000
   # capabilities:
   #   drop:
   #   - ALL
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
-  # runAsUser: 1000
 
 service:
   type: ClusterIP
   port: 80
-  targetPort: 80
+  targetPort: 3000
 
 ingress:
   enabled: false
@@ -91,3 +91,10 @@ readinessProbe:
   httpGet:
     path: /
     port: http
+
+persistence:
+  name: disco
+  mountPath: /home/project
+  size: 2Gi
+  accessMode: ReadWriteOnce
+  
