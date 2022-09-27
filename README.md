@@ -1,1 +1,1 @@
-# Repositório loca de charts - Sergio
+# Repositório local de charts - Sergio
